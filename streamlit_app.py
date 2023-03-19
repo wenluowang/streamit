@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 
 def main():
-    st.title('Excel File Viewer')
+    st.title('CSV File Viewer')
 
-    # Add a file uploader button to read an Excel file
-    uploaded_file = st.file_uploader("Upload Excel file", type="xlsx")
+    # Add a file uploader button to read a CSV file
+    uploaded_file = st.file_uploader("Upload CSV file", type="csv")
 
     if uploaded_file:
-        # Read the uploaded Excel file into a pandas dataframe
-        df = pd.read_excel(uploaded_file, engine='openpyxl')
+        # Read the uploaded CSV file into a pandas dataframe
+        df = pd.read_csv(uploaded_file)
 
         # Display the uploaded data in a table
         st.dataframe(df)
