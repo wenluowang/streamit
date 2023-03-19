@@ -9,7 +9,7 @@ def main():
 
     if uploaded_file:
         # Read the uploaded CSV file into a pandas dataframe
-        df = pd.read_csv(uploaded_file, encoding='gbk')
+        df = pd.read_csv(uploaded_file, encoding='gb18030')
 
         # Display the uploaded data in a table
         st.dataframe(df)
